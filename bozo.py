@@ -34,7 +34,6 @@ class Bozo(object):
                 self.cache.append(hash)
                 self.cracked[hash] = plain_text
 
-
     def crack_single(self, hash):
         # Pretend to be Firefox to stop the AWESOME Google 403
         user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
