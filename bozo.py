@@ -38,9 +38,9 @@ class Bozo(object):
         # Pretend to be Firefox to stop the AWESOME Google 403
         user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
         url = "http://www.google.com/search?q=%s" % hash
-        headers = {'User-Agent':user_agent,} 
+        headers = {'User-Agent': user_agent,} 
 
-        request = urllib2.Request(url,None,headers)
+        request = urllib2.Request(url, None, headers)
         response = urllib2.urlopen(request)
 
         wordlist = response.read().split(" ")
