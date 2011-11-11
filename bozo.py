@@ -18,14 +18,18 @@ import urllib2
 
 class Bozo(object):
 
-    def __init__(self, file):
+    def __init__(self, hashes):
         self.hashes = []
         self.cache = []
         self.cracked = {}
 
-        for hash in open(file, "r").read().split("\n"):
-            if len(hash) == 32: # original uses a regex, I figured I'd just check length and be lazy
-                self.hashes.append(hash)
+        # Assume it's a single hash
+        if not os.path.exists(hashes):
+                self.hashes.append(hashes)
+        else:
+            for hash in open(hashes, "r").read().split("\n"):
+                if len(hash) == 32: # original uses a regex, I figured I'd just check length and be lazy
+                    self.hashes.append(hash)
 
         self.hashes = list(set(self.hashes))
         print "Loaded %s hashes" % len(self.hashes)

@@ -6,4 +6,12 @@ Python implementation of BozoCrack - https://github.com/juuso/BozoCrack
 Usage
 =====
 
-python bozo.py HASHLIST.TXT
+Single hash
+-----------
+
+  python bozo.py HASH
+
+Multiple hashes
+---------------
+
+  python bozo.py HASHLIST.TXT
