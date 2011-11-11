@@ -2,9 +2,6 @@
 PyBozo
 ======
 
-About
-=====
-
 Python implementation of BozoCrack - https://github.com/juuso/BozoCrack
 
 Usage
