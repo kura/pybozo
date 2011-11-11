@@ -4,11 +4,6 @@
 # Original: https://github.com/juuso/BozoCrack
 #
 
-# TODO
-# 
-# * single hash lookup
-#
-
 import sys
 import os
 import md5
