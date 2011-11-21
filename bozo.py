@@ -1,5 +1,3 @@
-# 
-# This is such a rip off of the original that even the method names rename the same
 #
 # Original: https://github.com/juuso/BozoCrack
 #
