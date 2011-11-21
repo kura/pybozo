@@ -31,12 +31,13 @@ class Bozo(object):
         for hash in self.hashes:
             if hash in self.cache:
                 print "%s:%s" % (hash, self.cracked[hash])
-            plain_text = self.crack_single(hash)
-            if plain_text:
-                print "%s:%s" % (hash, plain_text)
-                self.cache.append(hash)
-                self.cracked[hash] = plain_text
-            time.sleep(0.1)
+            else:
+                plain_text = self.crack_single(hash)
+                if plain_text:
+                    print "%s:%s" % (hash, plain_text)
+                    self.cache.append(hash)
+                    self.cracked[hash] = plain_text
+                time.sleep(0.1)
 
     def crack_single(self, hash):
         # Pretend to be Chrome to stop the AWESOME Google 403.
