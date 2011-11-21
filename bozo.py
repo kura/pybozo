@@ -1,5 +1,5 @@
 #
-# Original: https://github.com/juuso/BozoCrack
+# Python implementation of https://github.com/juuso/BozoCrack
 #
 
 import sys
