@@ -66,12 +66,12 @@ class Bozo(object):
     def load_cache(self):
         if os.stat("bozo.cache").st_size != 0:
             for line in open("bozo.cache", "r").read().strip().split("\n"):
-                hash, plain_text = line.split(":")
+                hash, plain_text = line.split("|@bozo@|")
                 self.cache[hash] = plain_text
 
     def write_cache(self, hash, plain_text):
         with open("bozo.cache", "a") as cache:
-            cache.write("%s:%s\n" % (hash, plain_text))
+            cache.write("%s|@bozo@|%s\n" % (hash, plain_text))
 
 
 if __name__ == "__main__":
